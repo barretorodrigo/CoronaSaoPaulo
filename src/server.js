@@ -1,5 +1,6 @@
-const csvFilePath="/home/barreto/node-JS-studies/CoronaSaoPaulo/backend/data/06-04-2020-sp.csv";
-const csvFilePathByCities="/home/barreto/node-JS-studies/CoronaSaoPaulo/backend/data/06-04-2020-spByCities.csv";
+//https://www.npmjs.com/package/csvtojson
+const csvFilePath="/home/barreto/node-JS-studies/CoronaSaoPaulo/data/06-04-2020-sp.csv";
+const csvFilePathByCities="/home/barreto/node-JS-studies/CoronaSaoPaulo/data/06-04-2020-spByCities.csv";
 const csv=require('csvtojson');
 
 var express = require('express');
