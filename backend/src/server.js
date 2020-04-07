@@ -1,6 +1,10 @@
-const csvFilePath="/home/barreto/node-JS-studies/CoronaSaoPaulo/backend/data/06-04-2020-sp.csv";
-const csvFilePathByCities="/home/barreto/node-JS-studies/CoronaSaoPaulo/backend/data/06-04-2020-spByCities.csv";
+const path = require('path');
+
+const csvFilePath=path.join(__dirname, '../data', '06-04-2020-sp.csv');
+const csvFilePathByCities=path.join(__dirname, '../data', '06-04-2020-spByCities.csv');
 const csv=require('csvtojson');
+
+console.log(csvFilePath);
 
 var express = require('express');
 var app = express();
