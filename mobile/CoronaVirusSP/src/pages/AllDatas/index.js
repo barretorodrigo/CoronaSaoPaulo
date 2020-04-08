@@ -8,7 +8,7 @@ import {
   } from "react-native-chart-kit";
 
 export default function AllDatas(){
-    const [datas, setDatas] = useState([]);
+    const [datas, setDatas] = useState([{day:1}]);
     const [obits, setObits] = useState([0]);
     const [cases, setCases] = useState([0]);
     const [days, setDays] = useState([0]);
@@ -29,7 +29,6 @@ export default function AllDatas(){
     async function loadingDatas(){
         let sumTotalObits = 0;
         const response = await api.get('/all',{
-
         });
         setDatas([...datas, ...response.data]);
         setCases([]);
@@ -41,9 +40,10 @@ export default function AllDatas(){
             sumTotalObits += parseInt(item.obits);
         });
         setTotalObits(sumTotalObits);
-        setLast24Case(datas.pop().day);
-        setDays(datas.length);
+        setLast24Case(response.data.pop().day);
+        setDays(dates.length);
         setTotalCases(cases.pop());
+        console.log(response.data.pop().total);
         setData({
             //labels: dates,            
             datasets: [
@@ -86,7 +86,7 @@ export default function AllDatas(){
                     </View>
                     <View style={styles.boxes}>
                         <DataBox value='44,04 mi.' name="População"/>
-                        <DataBox value={100*totalObits/totalCases} name="Taxa de óbito"/>
+                        <DataBox value={(100*totalObits/totalCases).toFixed(2)} name="Taxa de óbito"/>
                     </View>
                     <View style={styles.chart}>
                         <LineChart
