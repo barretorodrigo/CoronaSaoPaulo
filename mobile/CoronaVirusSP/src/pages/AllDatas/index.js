@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import api from '../../services/api';
-import {Text, View, Dimensions, ScrollView} from  'react-native';
+import {Entypo} from '@expo/vector-icons';
+import {useNavigation} from '@react-navigation/native';
+import {Text, View, Dimensions, ScrollView, TouchableOpacity} from  'react-native';
 import styles from './style';
 import DataBox from '../../Components/DataBox';
 import {
@@ -8,10 +10,12 @@ import {
   } from "react-native-chart-kit";
 
 export default function AllDatas(){
+    const navigation = useNavigation();
     const [datas, setDatas] = useState([{day:1}]);
     const [obits, setObits] = useState([0]);
     const [cases, setCases] = useState([0]);
     const [days, setDays] = useState([0]);
+    const [lastUpdate, setLastUpdate] = useState('');
     const [dates, setDates] = useState(['01 Jan']);
     const [totalCases, setTotalCases] = useState(0);
     const [totalObits, setTotalObits] = useState(0);
@@ -25,6 +29,10 @@ export default function AllDatas(){
     ],});
 
     const screenWidth = Dimensions.get("window").width;
+
+    function navigateToDetail(){
+        navigation.navigate('Detail');
+    }
 
     async function loadingDatas(){
         let sumTotalObits = 0;
@@ -43,7 +51,6 @@ export default function AllDatas(){
         setLast24Case(response.data.pop().day);
         setDays(dates.length);
         setTotalCases(cases.pop());
-        console.log(response.data.pop().total);
         setData({
             //labels: dates,            
             datasets: [
@@ -55,8 +62,15 @@ export default function AllDatas(){
             ],
         } );
     }
+
+    async function loadingLastUpdate(){
+        const response = await api.get('/update',{});
+        setLastUpdate(response.data);
+    }
+
     useEffect(()=>{
-        loadingDatas()
+        loadingDatas();
+        loadingLastUpdate()
     }, [])
 
     const chartConfig = {
@@ -71,8 +85,15 @@ export default function AllDatas(){
     return(
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.headerText}>Estado de São Paulo</Text>
-                <Text style={styles.headerSubText}>Última atualização em: 07/04 às 11:30 </Text>
+                <View>
+                    <Text style={styles.headerText}>Estado de São Paulo</Text>
+                    <Text style={styles.headerSubText}>Última atualização em: {lastUpdate.lastUpdate} </Text>
+                </View>
+                <View>
+                    <TouchableOpacity onPress={()=>{navigateToDetail()}}>
+                        <Entypo name="dots-three-vertical" size={16} color="#000" />
+                    </TouchableOpacity>
+                </View>
             </View>
             <ScrollView>
                 <View style={styles.scroll}>
@@ -88,6 +109,7 @@ export default function AllDatas(){
                         <DataBox value='44,04 mi.' name="População"/>
                         <DataBox value={(100*totalObits/totalCases).toFixed(2)} name="Taxa de óbito"/>
                     </View>
+                    <Text style={styles.info}>*Fonte: Secretaria de Saúde do Estado de São Paulo</Text>
                     <View style={styles.chart}>
                         <LineChart
                             data={data}

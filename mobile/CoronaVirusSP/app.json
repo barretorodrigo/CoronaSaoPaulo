@@ -7,6 +7,13 @@
       "android",
       "web"
     ],
+    "android": {
+      "package": "br.com.rbarreto.coronasp",
+      "versionCode": 1,
+      "adaptiveIcon":{
+        "backgroundColor": "#9F000F"
+      }
+    },
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
