@@ -6,8 +6,11 @@ import NumberFormat from 'react-number-format';
 export default function DataBox(props){
     return(
         <View style={DataBoxStyle.box}>
-            {/* <NumberFormat value={props.value} displayType={'text'} renderText={value => <Text style={DataBoxStyle.value}>{value}</Text>} /> */}
-            <Text style={DataBoxStyle.value}>{props.value}</Text> 
+            <NumberFormat 
+                value={parseFloat(props.value)} 
+                decimalSeparator="," 
+                displayType={'text'} 
+                renderText={value => <Text style={DataBoxStyle.value}>{value} {props.sufix}</Text>} />
             <Text style={DataBoxStyle.text}>{props.name}</Text>
         </View>
     )
