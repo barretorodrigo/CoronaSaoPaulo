@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Detail from './pages/Detail';
 import AllDatas from './pages/AllDatas';
+import AllCities from './pages/AllCities';
 
 const AppStack = createStackNavigator();
 
@@ -12,6 +13,7 @@ export default function Routes(){
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 <AppStack.Screen name="AllDatas" component={AllDatas} />
                 <AppStack.Screen name="Detail" component={Detail} />
+                <AppStack.Screen name="AllCities" component={AllCities} />
             </AppStack.Navigator>
         </NavigationContainer>
     );

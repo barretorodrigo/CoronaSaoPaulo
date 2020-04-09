@@ -13,7 +13,6 @@ export default function AllDatas(){
     const [obits, setObits] = useState([0]);
     const [cases, setCases] = useState([0]);
     const [days, setDays] = useState([0]);
-    const [lastUpdate, setLastUpdate] = useState('');
     const [dates, setDates] = useState(['01 Jan']);
     const [totalCases, setTotalCases] = useState(0);
     const [totalObits, setTotalObits] = useState(0);
@@ -56,14 +55,8 @@ export default function AllDatas(){
         } );
     }
 
-    async function loadingLastUpdate(){
-        const response = await api.get('/update',{});
-        setLastUpdate(response.data);
-    }
-
     useEffect(()=>{
         loadingDatas();
-        loadingLastUpdate()
     }, [])
 
     const chartConfig = {
@@ -77,7 +70,7 @@ export default function AllDatas(){
 
     return(
         <View style={styles.container}>
-            <Header lastUpdate={lastUpdate.lastUpdate}/>
+            <Header/>
             <ScrollView>
                 <View style={styles.scroll}>
                     <View style={styles.boxes}>
