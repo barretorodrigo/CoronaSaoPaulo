@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import api from '../../services/api';
-import {Text, View, Dimensions, ScrollView, TouchableOpacity, StatusBar} from  'react-native';
+import {Text, View, Dimensions, ScrollView} from  'react-native';
+import { ActivityIndicator} from 'react-native-paper';
 import styles from './style';
 import DataBox from '../../Components/DataBox';
 import Header from '../../Components/Header';
@@ -9,6 +10,7 @@ import {
   } from "react-native-chart-kit";
 
 export default function AllDatas(){
+    const [loading, setLoading] = useState(true);
     const [datas, setDatas] = useState([{day:1}]);
     const [deaths, setDeaths] = useState([0]);
     const [cases, setCases] = useState([0]);
@@ -28,6 +30,7 @@ export default function AllDatas(){
     const screenWidth = Dimensions.get("window").width;
 
     async function loadingDatas(){
+        setLoading(true);
         let sumTotalDeaths = 0;
         const response = await api.get('/all',{
         });
@@ -53,6 +56,7 @@ export default function AllDatas(){
                 }
             ],
         } );
+        setLoading(false);
     }
 
     useEffect(()=>{
@@ -71,6 +75,7 @@ export default function AllDatas(){
     return(
         <View style={styles.container}>
             <Header/>
+            {loading ? <ActivityIndicator style={styles.spinner} color="#9F000F"/> :
             <ScrollView>
                 <View style={styles.scroll}>
                     <View style={styles.boxes}>
@@ -100,6 +105,7 @@ export default function AllDatas(){
                     </View>
                 </View>
             </ScrollView>
+            }
         </View>
     );
 }

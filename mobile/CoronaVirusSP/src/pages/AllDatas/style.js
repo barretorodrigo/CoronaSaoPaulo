@@ -34,5 +34,8 @@ export default StyleSheet.create({
         fontSize: 8,
         color: "#a9a9a9",
         marginTop:5
+    },
+    spinner:{
+        marginTop: 20
     }
 })

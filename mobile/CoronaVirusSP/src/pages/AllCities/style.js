@@ -9,5 +9,8 @@ export default StyleSheet.create({
     },
     scrollView:{
         width: Dimensions.get('window').width
+    },
+    spinner:{
+        marginTop: 20
     }
 })

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Text, View, ScrollView} from  'react-native';
-import { DataTable } from 'react-native-paper';
+import { DataTable, ActivityIndicator} from 'react-native-paper';
 import Header from '../../Components/Header';
 import styles from './style';
 import api from '../../services/api';
@@ -8,9 +8,12 @@ import api from '../../services/api';
 export default function AllCities(){
 
     const [allCities, setAllCities] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     async function loadingAllCitiesDatas(){
+        setLoading(true)
         const response = (await api.get('/allbycities',{}));
+        setLoading(false)
         setAllCities(response.data);
     }
 
@@ -21,6 +24,7 @@ export default function AllCities(){
     return(
         <View style={styles.container}>
             <Header/>
+            {loading ? <ActivityIndicator style={styles.spinner} color="#9F000F"/> :
             <ScrollView style={styles.scrollView}>
                 <DataTable>
                     <DataTable.Header>
@@ -42,6 +46,7 @@ export default function AllCities(){
                     ))}
                 </DataTable>
             </ScrollView>
+            }
         </View> 
     )
 }
