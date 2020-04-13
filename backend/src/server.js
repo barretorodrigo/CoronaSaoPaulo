@@ -1,17 +1,17 @@
 const path = require('path');
 
-const csvFilePath=path.join(__dirname, '../data', '06-04-2020-sp.csv');
-const csvFilePathByCities=path.join(__dirname, '../data', '06-04-2020-spByCities.csv');
+const csvFilePath=path.join(__dirname, '../data', '12-04-2020-sp.csv');
+const csvFilePathByCities=path.join(__dirname, '../data', '12-04-2020-spByCities.csv');
 const csv=require('csvtojson');
 
-const lastUpdate={lastUpdate: "08/04 às 18:40"};
+const lastUpdate={lastUpdate: "12/04 às 16:00"};
 
 var express = require('express');
 var app = express();
 app.use(express.static(__dirname + '../data'));
 
 app.get('/', async function (req, res) {
-    res.send("Corona Vírus - SP");
+    res.send("Coronavírus - SP");
 });
 
 app.get('/update', async function (req, res) {

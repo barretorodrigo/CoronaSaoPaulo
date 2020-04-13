@@ -1,4 +1,4 @@
-total,day,obits,date
+total,day,deaths,date
 1,1,0,26 fev
 0,0,0,27 fev
 0,0,0,28 fev
@@ -41,3 +41,8 @@ total,day,obits,date
 4620,154,15,05 abr
 4861,241,29,06 abr
 5682,821,67,07 abr
+6708,1026,57,08 abr
+7480,772,68,09 abr
+8216,736,44,10 abr
+8419,203,20,11 abr
+8755,336,28,12 abr
