@@ -10,7 +10,6 @@
     "android": {
       "package": "br.com.rbarreto.coronasp",
       "versionCode": 1,
-      "roundIcon": "./assets/roundedicon.png",
       "adaptiveIcon":{
         "backgroundColor": "#9F000F"
       }
@@ -18,7 +17,6 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "roundIcon": "./assets/roundedicon.png",
     "splash": {
       "image": "./assets/splashcorona.png",
       "resizeMode": "contain",
