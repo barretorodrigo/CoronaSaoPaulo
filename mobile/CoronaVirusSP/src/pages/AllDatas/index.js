@@ -10,17 +10,17 @@ import {
 
 export default function AllDatas(){
     const [datas, setDatas] = useState([{day:1}]);
-    const [obits, setObits] = useState([0]);
+    const [deaths, setDeaths] = useState([0]);
     const [cases, setCases] = useState([0]);
     const [days, setDays] = useState([0]);
     const [dates, setDates] = useState(['01 Jan']);
     const [totalCases, setTotalCases] = useState(0);
-    const [totalObits, setTotalObits] = useState(0);
+    const [totalDeaths, setTotalDeaths] = useState(0);
     const [last24Case, setLast24Case] = useState(0);
     const [data, setData] = useState({labels: dates,
     datasets: [
         {
-        data: obits,
+        data: deaths,
         color: (opacity = 1) => `rgba(134, 65, 244, ${opacity})`, // optional
         }
     ],});
@@ -28,7 +28,7 @@ export default function AllDatas(){
     const screenWidth = Dimensions.get("window").width;
 
     async function loadingDatas(){
-        let sumTotalObits = 0;
+        let sumTotalDeaths = 0;
         const response = await api.get('/all',{
         });
         setDatas([...datas, ...response.data]);
@@ -37,10 +37,10 @@ export default function AllDatas(){
         await response.data.forEach((item)=>{
             cases.push(parseInt(item.total));
             dates.push(item.date);
-            obits.push(parseInt(item.obits));
-            sumTotalObits += parseInt(item.obits);
+            deaths.push(parseInt(item.deaths));
+            sumTotalDeaths += parseInt(item.deaths);
         });
-        setTotalObits(sumTotalObits);
+        setTotalDeaths(sumTotalDeaths);
         setLast24Case(response.data.pop().day);
         setDays(dates.length);
         setTotalCases(cases.pop());
@@ -79,11 +79,11 @@ export default function AllDatas(){
                     </View>
                     <View style={styles.boxes}>
                         <DataBox value={days} name="Dias"/>
-                        <DataBox value={totalObits} name="Óbitos"/>
+                        <DataBox value={totalDeaths} name="Óbitos"/>
                     </View>
                     <View style={styles.boxes}>
                         <DataBox value='44.57' name="População" sufix="mi"/>
-                        <DataBox value={(100*totalObits/totalCases).toFixed(2)} name="Taxa de óbito" sufix="%"/>
+                        <DataBox value={(100*totalDeaths/totalCases).toFixed(2)} name="Taxa de óbito" sufix="%"/>
                     </View>
                     <Text style={styles.info}>*Fonte: Secretaria de Saúde do Estado de São Paulo e Seade</Text>
                     <View style={styles.chart}>

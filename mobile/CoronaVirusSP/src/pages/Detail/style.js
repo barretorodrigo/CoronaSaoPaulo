@@ -5,7 +5,15 @@ export default StyleSheet.create({
 
     container: {
         flex: 1,
-        paddingTop: Constants.statusBarHeight + 20,
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: "center"
     },
+    image:{
+        height: 150,
+        resizeMode: "center"
+    },
+    link:{
+        color: "#9F000F",
+        textDecorationLine:"underline"
+    }
 })

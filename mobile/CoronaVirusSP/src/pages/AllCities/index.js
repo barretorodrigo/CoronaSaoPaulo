@@ -31,13 +31,13 @@ export default function AllCities(){
 
                     {allCities
                     .sort((a,b)=>{
-                        return b.Total_de_Casos-a.Total_de_Casos;
+                        return b.total_cases-a.total_cases;
                     })
                     .map((item, key)=>(
                         <DataTable.Row key={key}>
-                        <DataTable.Cell>{item.Município}</DataTable.Cell>
-                        <DataTable.Cell numeric>{item.Total_de_Casos}</DataTable.Cell>
-                        <DataTable.Cell numeric>{item.Total_de_Óbitos}</DataTable.Cell>
+                        <DataTable.Cell>{item.city}</DataTable.Cell>
+                        <DataTable.Cell numeric>{item.total_cases}</DataTable.Cell>
+                        <DataTable.Cell numeric>{item.total_deaths}</DataTable.Cell>
                         </DataTable.Row>
                     ))}
                 </DataTable>
