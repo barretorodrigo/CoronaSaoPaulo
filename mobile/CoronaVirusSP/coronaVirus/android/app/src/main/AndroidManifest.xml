@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.coronavirus">
+    package="br.com.rbarreto.coronasp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission tools:node="remove" android:name="android.permission.CAMERA" />
@@ -9,14 +9,14 @@
     <uses-permission tools:node="remove" android:name="android.permission.READ_CONTACTS" />
 
     <application
-      android:name=".MainApplication"
+      android:name="br.com.rbarreto.coronasp.MainApplication"
       android:label="@string/app_name"
       android:icon="@mipmap/coronaicon"
       android:roundIcon="@mipmap/roundedicon"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
       <activity
-        android:name=".MainActivity"
+        android:name="br.com.rbarreto.coronasp.MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
         android:launchMode="singleTask"
