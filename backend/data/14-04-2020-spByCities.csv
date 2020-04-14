@@ -1,0 +1,182 @@
+city,total_cases,total_deaths,lat,lon
+Adamantina,1,0,-21,682
+Águas de Lindóia,1,1,-22,4733
+Águas de São Pedro,1,0,-22,5977
+Agudos,2,1,-22,4694
+Americana,4,2,-22,7374
+Américo Brasiliense,2,0,-21,7288
+Amparo,2,0,-22,7088
+Araçariguama,1,0,-23,4366
+Araçatuba,15,0,-21,2076
+Araçoiaba da Serra,1,0,-23,5029
+Araraquara,11,2,-21,7845
+Araras,3,0,-22,3572
+Artur Nogueira,1,0,-22,5727
+Arujá,15,1,-23,3965
+Assis,4,1,-22,66
+Atibaia,13,0,-23,1171
+Avaré,3,1,-23,1067
+Bady Bassitt,2,0,-20,9197
+Bariri,1,0,-22,73
+Barra do Turvo,1,0,-24,759
+Barretos,5,0,-20,5531
+Barueri,51,4,-23,5057
+Batatais,1,0,-20,8929
+Bauru,13,1,-22,3246
+Bebedouro,1,0,-20,9491
+Birigui,5,0,-21,291
+Boituva,4,0,-23,2855
+Botucatu,23,2,-22,8837
+Bragança Paulista,28,5,-22,9527
+Brodowski,3,0,-20,9845
+Caçapava,4,0,-23,992
+Cachoeira Paulista,1,0,-22,6665
+Caiabu,1,1,-22,127
+Caieiras,36,6,-23,3607
+Cajamar,5,1,-23,355
+Cajuru,1,0,-21,2749
+Campinas,112,5,-22,9053
+Campos do Jordão,1,0,-22,7296
+Caraguatatuba,2,1,-23,6125
+Carapicuíba,36,2,-23,5235
+Catanduva,6,2,-21,1314
+Cedral,1,0,-20,9009
+Conchas,1,0,-23,154
+Cotia,64,4,-23,6022
+Cravinhos,5,1,-21,338
+Cubatão,3,0,-23,8911
+Diadema,71,2,-23,6813
+Dracena,1,1,-21,4843
+Eldorado,1,1,-24,5281
+Embu das Artes,37,2,-23,6437
+Embu-Guaçu,4,0,-23,8297
+Estiva Gerbi,1,0,-22,2713
+Ferraz de Vasconcelos,35,1,-23,5411
+Franca,3,1,-20,5352
+Francisco Morato,14,1,-23,2792
+Franco da Rocha,22,2,-23,3229
+Garça,2,0,-22,2125
+Guararapes,3,0,-21,2544
+Guararema,1,0,-23,4112
+Guaratinguetá,1,0,-22,8075
+Guarujá,12,0,-23,9888
+Guarulhos,214,19,-23,4538
+Hortolândia,2,0,-22,8529
+Ibirá,1,0,-21,83
+Ibiúna,1,0,-23,6596
+Igaratá,1,0,-23,2037
+Ilha Comprida,9,0,-24,7307
+Ilhabela,1,0,-23,7785
+Indaiatuba,4,0,-23,816
+Iracemápolis,1,0,-22,5832
+Itanhaém,2,0,-24,1736
+Itapecerica da Serra,27,1,-23,7161
+Itapetininga,4,1,-23,5886
+Itapeva,1,0,-23,9788
+Itapevi,19,4,-23,5488
+Itapira,1,0,-22,4357
+Itaquaquecetuba,28,0,-23,4835
+Itararé,1,0,-24,1085
+Itatiba,1,1,-23,35
+Itatinga,1,0,-23,1047
+Itu,3,0,-23,2544
+Itupeva,1,0,-23,1526
+Jaboticabal,7,2,-21,252
+Jacareí,2,0,-23,2983
+Jaci,1,0,-20,8805
+Jaguariúna,1,0,-22,7037
+Jales,1,0,-20,2672
+Jandira,5,0,-23,5275
+Jardinópolis,2,0,-21,176
+Jaú,1,0,-22,2936
+Joanópolis,1,0,-22,927
+José Bonifácio,2,0,-21,551
+Jundiaí,14,1,-23,1852
+Laranjal Paulista,2,2,-23,506
+Leme,1,1,-22,1809
+Lençóis Paulista,3,0,-22,6027
+Limeira,6,0,-22,566
+Lins,1,1,-21,6718
+Louveira,1,0,-23,856
+Macatuba,1,0,-22,5002
+Mairinque,1,0,-23,5398
+Mairiporã,7,2,-23,3171
+Marília,4,0,-22,2171
+Matão,3,0,-21,6025
+Mauá,52,1,-23,6677
+Mirassol,5,0,-20,8169
+Mococa,2,1,-21,4647
+Mogi das Cruzes,65,5,-23,5208
+Mogi Guaçu,6,1,-22,3675
+Mongaguá,1,0,-24,809
+Monte Alto,3,1,-21,2655
+Nhandeara,1,0,-20,6945
+Nova Odessa,1,1,-22,7832
+Olímpia,3,0,-20,7366
+Orlândia,2,0,-20,7169
+Osasco,144,13,-23,5324
+Ourinhos,1,0,-22,9797
+Pariquera-Açu,2,0,-24,7147
+Paulínia,5,0,-22,7542
+Pedra Bela,1,0,-22,7902
+Penápolis,1,1,-21,4148
+Peruíbe,4,0,-24,312
+Pilar do Sul,1,0,-23,8077
+Pindamonhangaba,2,1,-22,9246
+Pindorama,1,0,-21,1853
+Piracicaba,16,1,-22,7338
+Pirajuí,1,0,-21,999
+Poá,9,1,-23,5333
+Pontal,2,0,-21,216
+Porto Feliz,1,0,-23,2093
+Porto Ferreira,2,1,-21,8498
+Praia Grande,18,3,-24,84
+Presidente Prudente,4,2,-22,1207
+Presidente Venceslau,4,2,-21,8732
+Promissão,1,0,-21,5356
+Ribeirão Pires,17,0,-23,7067
+Ribeirão Preto,53,4,-21,1699
+Rincão,1,0,-21,5894
+Rio Claro,6,2,-22,3984
+Rio Grande da Serra,5,0,-23,7437
+Salto,3,0,-23,1996
+Salto de Pirapora,2,0,-23,6474
+Santa Bárbara d'Oeste,1,0,-22,7553
+Santa Branca,2,1,-23,3933
+Santa Cruz do Rio Pardo,5,0,-22,8988
+Santa Isabel,1,1,-23,3172
+Santa Lúcia,1,0,-21,685
+Santana de Parnaíba,34,0,-23,4439
+Santo André,160,4,-23,6737
+Santos,171,6,-23,9535
+São Bernardo do Campo,201,11,-23,6914
+São Caetano do Sul,77,3,-23,6229
+São Carlos,6,2,-22,174
+São João da Boa Vista,3,0,-21,9707
+São José do Rio Pardo,1,0,-21,5953
+São José do Rio Preto,56,3,-20,8113
+São José dos Campos,90,2,-23,1896
+São Manuel,3,1,-22,7321
+São Miguel Arcanjo,2,0,-23,8782
+São Paulo,6705,512,-23,5329
+São Pedro,1,0,-22,5483
+São Roque,4,0,-23,5226
+São Sebastião,4,1,-23,7951
+São Vicente,16,0,-23,9574
+Sertãozinho,2,0,-21,1316
+Sorocaba,25,2,-23,4969
+Sumaré,3,0,-22,8204
+Suzano,38,6,-23,5448
+Taboão da Serra,78,5,-23,6019
+Tanabi,1,0,-20,6228
+Tatuí,5,0,-23,3487
+Taubaté,8,0,-23,104
+Terra Roxa,1,0,-20,787
+Tupã,1,0,-21,9335
+Ubatuba,1,0,-23,4332
+Valinhos,6,1,-22,9698
+Vargem Grande Paulista,5,3,-23,5993
+Várzea Paulista,1,0,-23,2136
+Vinhedo,9,0,-23,302
+Votorantim,2,0,-23,5446
+Votuporanga,7,0,-20,4237
