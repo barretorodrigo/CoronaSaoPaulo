@@ -38,6 +38,11 @@ cd ./mobile/CoronaVirusSP/coronaVirus/
 react-native run-android
 ```
 
+## Screenshots
+
+![screenshot1](https://raw.githubusercontent.com/barretorodrigo/CoronaSaoPaulo/master/screenshots/Screenshot1.png = 100)
+![screenshot2](https://raw.githubusercontent.com/barretorodrigo/CoronaSaoPaulo/master/screenshots/Screenshot2.png = 100)
+![screenshot3](https://raw.githubusercontent.com/barretorodrigo/CoronaSaoPaulo/master/screenshots/Screenshot3.png = 100)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
