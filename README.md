@@ -22,7 +22,7 @@ npm start
 Now datas are visibles on **http://localhost:3000/all** and **http://localhost:3000/allbycities**.
 
 
-## Running mobile app
+## Running mobile app - React-Native
 
 This app is development on React-Native. You need to install [react-native-cli](https://github.com/react-native-community/cli)
 
@@ -36,6 +36,16 @@ On another CLI terminal run:
 ```bash
 cd ./mobile/CoronaVirusSP/coronaVirus/
 react-native run-android
+```
+
+## Running mobile app - Expo
+
+It is the alternative form to run the mobile app. You need to install [expo](https://docs.expo.io/versions/latest/)
+
+```bash
+cd ./mobile/CoronaVirusSP/
+npm install
+expo start
 ```
 
 ## Screenshots
