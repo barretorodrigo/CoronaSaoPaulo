@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
 
-Coronavirus at state of São Paulo: Application to show data and chart of coronavirus cases at state of São Paulo, sorting cases by cities.
+Coronavirus at state of São Paulo: Application to show data and chart of confirmed coronavirus cases at state of São Paulo, sorting cases by cities.
 
 ## Data
 
