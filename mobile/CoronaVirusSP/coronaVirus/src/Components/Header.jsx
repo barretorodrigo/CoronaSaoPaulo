@@ -1,7 +1,5 @@
 import React, {useRef, useState, useEffect} from 'react';
 import {Text, View, StatusBar} from  'react-native';
-//import {MaterialCommunityIcons, MaterialIcons, Entypo} from 'react-native-vector-icons/';
-//import {MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons/';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';

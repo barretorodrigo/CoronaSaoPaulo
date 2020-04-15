@@ -75,7 +75,7 @@ export default function AllDatas(){
     return(
         <View style={styles.container}>
             <Header/>
-            {loading ? <ActivityIndicator style={styles.spinner} color="#9F000F"/> :
+            {loading ? <ActivityIndicator style={styles.spinner} color="#9F000F" size="large"/> :
             <ScrollView>
                 <View style={styles.scroll}>
                     <View style={styles.boxes}>

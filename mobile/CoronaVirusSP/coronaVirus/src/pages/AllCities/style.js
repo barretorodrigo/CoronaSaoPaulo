@@ -12,5 +12,9 @@ export default StyleSheet.create({
     },
     spinner:{
         marginTop: 20
+    },
+    headerText:{
+        fontSize: 18,
+        color: "#797979",
     }
 })

@@ -1,4 +1,4 @@
-package br.com.rbarreto.coronasp;
+package br.com.rbarreto.coronavirus;
 
 import com.facebook.react.ReactActivity;
 

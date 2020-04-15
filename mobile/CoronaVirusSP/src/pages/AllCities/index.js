@@ -24,7 +24,7 @@ export default function AllCities(){
     return(
         <View style={styles.container}>
             <Header/>
-            {loading ? <ActivityIndicator style={styles.spinner} color="#9F000F"/> :
+            {loading ? <ActivityIndicator style={styles.spinner} color="#9F000F" size="large"/> :
             <ScrollView style={styles.scrollView}>
                 <DataTable>
                     <DataTable.Header>
