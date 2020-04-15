@@ -1,10 +1,10 @@
 const path = require('path');
 
-const csvFilePath=path.join(__dirname, '../data', '14-04-2020-sp.csv');
-const csvFilePathByCities=path.join(__dirname, '../data', '14-04-2020-spByCities.csv');
+const csvFilePath=path.join(__dirname, '../data', '15-04-2020-sp.csv');
+const csvFilePathByCities=path.join(__dirname, '../data', '15-04-2020-spByCities.csv');
 const csv=require('csvtojson');
 
-const lastUpdate={lastUpdate: "14/04 às 15:00"};
+const lastUpdate={lastUpdate: "15/04 às 13:00"};
 
 var express = require('express');
 var app = express();
