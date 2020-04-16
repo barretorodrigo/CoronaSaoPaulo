@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Text, View, ScrollView, TouchableHighlight} from  'react-native';
+import {Text, View, FlatList, TouchableOpacity} from  'react-native';
 import { DataTable, ActivityIndicator} from 'react-native-paper';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Header from '../../Components/Header';
@@ -88,7 +88,6 @@ export default function AllCities(){
         <View style={styles.container}>
             <Header/>
             {loading ? <ActivityIndicator style={styles.spinner} color="#9F000F" size="large"/> :
-            <ScrollView style={styles.scrollView}>
                 <DataTable>
                     <DataTable.Header>
                     <DataTable.Title>
@@ -105,19 +104,21 @@ export default function AllCities(){
                     </DataTable.Title>
                     </DataTable.Header>
 
-                    {allCities
-                    // .sort((a,b)=>{
-                    //     return b.total_cases-a.total_cases;
-                    // })
-                    .map((item, key)=>(
-                        <DataTable.Row key={key}>
-                            <DataTable.Cell>{item.city}</DataTable.Cell>
-                            <DataTable.Cell numeric>{item.total_cases}</DataTable.Cell>
-                            <DataTable.Cell numeric>{item.total_deaths}</DataTable.Cell>
-                        </DataTable.Row>
-                    ))}
+                    <FlatList
+                        data={allCities}
+                        onEndReachedThreshold={0.2}
+                        showsVerticalScrollIndicator={false}
+                        keyExtractor={city=>String(city.city)}
+                        renderItem={({item})=>
+                            <DataTable.Row key={item.city}>
+                                <DataTable.Cell>{item.city}</DataTable.Cell>
+                                <DataTable.Cell numeric>{item.total_cases}</DataTable.Cell>
+                                <DataTable.Cell numeric>{item.total_deaths}</DataTable.Cell>
+                            </DataTable.Row>    
+                        }
+                    />
                 </DataTable>
-            </ScrollView>
+                
             }
         </View> 
     )

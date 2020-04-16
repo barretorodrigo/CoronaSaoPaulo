@@ -24,7 +24,15 @@ app.get('/all', async function (req, res) {
 });
 
 app.get('/allbycities', async function (req, res) {
-    const json = await csv().fromFile(csvFilePathByCities);
+    const { page = 0 } = req.query;
+    let json=[];
+    if (page==0){
+        json = await csv().fromFile(csvFilePathByCities);    
+    }else{
+        json = await (await csv().fromFile(csvFilePathByCities)).slice(page*20-20,20*page);
+    }
+    const count = json.length;
+    res.header('X-Total-Count', count);
     res.send(json);
 });
 
