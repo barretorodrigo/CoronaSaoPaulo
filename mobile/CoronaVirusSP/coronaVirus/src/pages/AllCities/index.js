@@ -90,16 +90,16 @@ export default function AllCities(){
             {loading ? <ActivityIndicator style={styles.spinner} color="#9F000F" size="large"/> :
                 <DataTable>
                     <DataTable.Header>
-                    <DataTable.Title>
-                        <Text style={styles.headerText} onPress={()=>setSort("byCity")}>Cidade</Text>
+                    <DataTable.Title onPress={()=>setSort("byCity")}>
+                        <Text style={styles.headerText}  onPress={()=>setSort("byCity")}>Cidade</Text>
                         <AntDesign name="caretdown" size={14} color="#797979" />
                     </DataTable.Title>
-                    <DataTable.Title numeric>
-                        <Text style={styles.headerText} onPress={()=>setSort("byCases")}>Casos</Text>
+                    <DataTable.Title numeric onPress={()=>setSort("byCases")}>
+                        <Text style={styles.headerText} >Casos</Text>
                         <AntDesign name="caretdown" size={14} color="#797979" />
                     </DataTable.Title>
-                    <DataTable.Title numeric>
-                        <Text style={styles.headerText} onPress={()=>setSort("byDeaths")}>Óbitos</Text>
+                    <DataTable.Title numeric onPress={()=>setSort("byDeaths")} >
+                        <Text style={styles.headerText} >Óbitos</Text>
                         <AntDesign name="caretdown" size={14} color="#797979" />
                     </DataTable.Title>
                     </DataTable.Header>
