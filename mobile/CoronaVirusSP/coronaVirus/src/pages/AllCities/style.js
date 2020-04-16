@@ -14,7 +14,7 @@ export default StyleSheet.create({
         marginTop: 20
     },
     headerText:{
-        fontSize: 18,
+        fontSize: 14,
         color: "#797979",
     }
 })
