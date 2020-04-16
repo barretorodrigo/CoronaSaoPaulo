@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {Text, View, FlatList, TouchableOpacity} from  'react-native';
-import { DataTable, ActivityIndicator} from 'react-native-paper';
+import {Text, View, FlatList} from  'react-native';
+import { DataTable, ActivityIndicator, TextInput} from 'react-native-paper';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Header from '../../Components/Header';
 import styles from './style';
@@ -87,6 +87,14 @@ export default function AllCities(){
     return(
         <View style={styles.container}>
             <Header/>
+            <TextInput
+                selectionColor="#9F000F"
+                style={styles.inputText}
+                label='Cidade'
+                theme={{colors:{underlineColor:"#9F000F"}}}
+                //value={this.state.text}
+                //onChangeText={text => this.setState({ text })}
+            />
             {loading ? <ActivityIndicator style={styles.spinner} color="#9F000F" size="large"/> :
                 <DataTable>
                     <DataTable.Header>

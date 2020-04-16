@@ -3,9 +3,9 @@ import Constants from 'expo-constants';
 
 export default StyleSheet.create({
     container: {
-        flex: 1,
+        //flex: 1,
         paddingTop: 20,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     scrollView:{
         width: Dimensions.get('window').width
@@ -16,5 +16,11 @@ export default StyleSheet.create({
     headerText:{
         fontSize: 14,
         color: "#797979",
+    },
+    inputText:{
+        marginTop:10,
+        width:Dimensions.get('window').width,
+        justifyContent: "center",
+        
     }
 })
