@@ -26,6 +26,11 @@ export default function Header(props){
         navigation.navigate('AllCities');
     }
 
+    function navigateToMap(){
+        menu.current.hide();
+        navigation.navigate('Map');
+    }
+
     async function loadingLastUpdate(){
         const response = await api.get('/update',{});
         setLastUpdate(response.data);
@@ -45,15 +50,19 @@ export default function Header(props){
             <View>
                 <Menu ref={menu} button={
                    
-                        <Entypo onPress={showMenu} name="dots-three-vertical" size={20} color="#000" />
+                        <Entypo onPress={()=>showMenu()} name="dots-three-vertical" size={20} color="#000" />
                    
                     }>
-                    <MenuItem onPress={navigateToAllCities}>
+                    <MenuItem onPress={()=>navigateToAllCities()}>
                         <MaterialCommunityIcons name="map-search" size={14} color="#9F000F"/>
                         <Text style={HeaderStyle.menuText}>Cidades</Text>
                     </MenuItem>
+                    <MenuItem onPress={()=>navigateToMap()}>
+                        <MaterialCommunityIcons name="map-search" size={14} color="#9F000F"/>
+                        <Text style={HeaderStyle.menuText}>Mapa</Text>
+                    </MenuItem>
                     <MenuDivider />
-                    <MenuItem onPress={navigateToDetail}>
+                    <MenuItem onPress={()=>navigateToDetail()}>
                         <MaterialIcons name="live-help" size={14} color="#9F000F"/>
                         <Text style={HeaderStyle.menuText}>Sobre</Text>
                     </MenuItem>
