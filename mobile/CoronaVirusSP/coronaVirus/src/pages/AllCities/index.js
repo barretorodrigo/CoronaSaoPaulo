@@ -6,18 +6,21 @@ import Header from '../../Components/Header';
 import styles from './style';
 import api from '../../services/api';
 
-export default function AllCities(){
+export default function AllCities(props){
 
     const [allCities, setAllCities] = useState([]);
+    const [allCitiesAux, setAllCitiesAux] = useState([]);
     const [loading, setLoading] = useState(true);
     const [sort, setSort] = useState("byCases");
     const [wait, setWait] = useState(true);
+    const [inputText, setInputText] = useState('');
     let response = [];
 
     async function loadingAllCitiesDatas(){
         setLoading(true);
         response = (await api.get('/allbycities',{}));
         setAllCities(await sortByCases(response.data));
+        setAllCitiesAux(response.data);
         setWait(false);
         setLoading(false);
     }
@@ -76,6 +79,17 @@ export default function AllCities(){
         );
     }
 
+    const filteInputText=(query)=>{
+        return allCitiesAux.filter(el=>el.city.toLowerCase().indexOf(query.toLowerCase())>-1);
+    }
+
+    async function textChange(text){
+        //await loadingAllCitiesDatas();
+        setInputText(text);
+        console.log(allCitiesAux)
+        setAllCities(filteInputText(text));
+    }
+
     useEffect(()=>{
         if(wait){
             loadingAllCitiesDatas();
@@ -88,12 +102,12 @@ export default function AllCities(){
         <View style={styles.container}>
             <Header/>
             <TextInput
-                selectionColor="#9F000F"
+                selectionColor='#9F000F'
                 style={styles.inputText}
                 label='Cidade'
-                theme={{colors:{underlineColor:"#9F000F"}}}
-                //value={this.state.text}
-                //onChangeText={text => this.setState({ text })}
+                theme={{colors:{primary:"#9F000F"}}}
+                value={inputText}
+                onChangeText={text => textChange(text)}
             />
             {loading ? <ActivityIndicator style={styles.spinner} color="#9F000F" size="large"/> :
                 <DataTable>

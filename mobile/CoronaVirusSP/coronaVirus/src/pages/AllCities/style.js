@@ -20,7 +20,6 @@ export default StyleSheet.create({
     inputText:{
         marginTop:10,
         width:Dimensions.get('window').width,
-        justifyContent: "center",
-        
-    }
+        justifyContent: "center",   
+    },
 })
