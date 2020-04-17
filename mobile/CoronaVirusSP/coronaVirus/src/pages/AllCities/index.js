@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Text, View, FlatList} from  'react-native';
-import { DataTable, ActivityIndicator, TextInput} from 'react-native-paper';
+import { DataTable, ActivityIndicator, TextInput, Searchbar} from 'react-native-paper';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Header from '../../Components/Header';
 import styles from './style';
@@ -84,9 +84,7 @@ export default function AllCities(props){
     }
 
     async function textChange(text){
-        //await loadingAllCitiesDatas();
         setInputText(text);
-        console.log(allCitiesAux)
         setAllCities(filteInputText(text));
     }
 
@@ -101,9 +99,10 @@ export default function AllCities(props){
     return(
         <View style={styles.container}>
             <Header/>
-            <TextInput
+            <Searchbar
                 selectionColor='#9F000F'
                 style={styles.inputText}
+                placeholder="Pesquisar cidade"
                 label='Cidade'
                 theme={{colors:{primary:"#9F000F"}}}
                 value={inputText}
